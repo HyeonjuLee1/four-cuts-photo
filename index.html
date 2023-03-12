@@ -30,6 +30,7 @@
         width: 390px;
         background-color: #ff9d73;
         height: 100%;
+        margin-top: 100px;
     }
 
     .photos {
@@ -43,6 +44,14 @@
         background-size: cover;
         position: relative;
         cursor: pointer;
+    }
+
+    .photo-frame:nth-child(1) {
+        background-position: center
+    }
+
+    .photo-frame:nth-child(2) {
+        background-position: bottom
     }
 
 
@@ -107,6 +116,7 @@
     .video {
         width: 100%;
         height: 100%;
+        object-fit: fill;
     }
 
     /* opacity : 투명도를 의미해요! opacity는 1에 가까워 질 수록 불투명하다. 즉 다 보인다. */
@@ -159,7 +169,7 @@
     // 클릭 기능
     // 1. 선택된 사진의 숫자를 가진 텍스트를 alert 형태로 출력해줌
     function alertText(number) {
-        alert(`${number}번째 추억이에요! 눌러주셔서 감사합니다 :)`);
+        alert(`${number}번째 사진이에요! 너무귀엽죠 :)`);
     } 
 </script>
 
@@ -179,12 +189,12 @@
                 <span id="desc3" class="photo-description">세 번째 이미지 설명</span>
             </div>
             <div class="photo-frame">
-                <iframe src="https://www.youtube.com/embed/agYZbSt-3LY" class="video" frameborder="0"></iframe>
+                <video src="./cat-video.mp4" class="video" frameborder="0" controls></video>
             </div>
         </div>
         <div class="footer">
-            <p class="f-title">Happy Lunch Time</p>
-            <p class="f-date">2023.01.25</p>
+            <p class="f-title">🍊🥑 귤콩이 🥑🍊</p>
+            <p class="f-date">2022년 어느날</p>
         </div>
     </div>
 </body>
